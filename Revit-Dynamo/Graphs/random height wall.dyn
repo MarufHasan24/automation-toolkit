@@ -1,0 +1,386 @@
+{
+  "Uuid": "e539ff7b-300b-4ab0-8778-a2d72ad0aa6f",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "random height wall",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "f4a07a85-e74f-41fe-ba6f-c0c4ed7124e4-001990ad"
+      ],
+      "Id": "4e9651a5c06c4e89a45f18f6c67fdb4a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4a0e2dbe974c4784b6be7095d925238e",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a model element from the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 16,
+      "SelectedString": "Generic - 200mm",
+      "Id": "dc39d9ca48ce47c68c8385b8e6b3d086",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "94db250ab90040aeb0ae9eae5d575b34",
+          "Name": "Wall Type",
+          "Description": "The selected Wall Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All wall types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "L1",
+      "Id": "e4c59aeba55f443fb95aa40c7122024c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b4dac71a9dcf42d89931203c01cf5a2c",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 13,
+      "SelectedString": "L9",
+      "Id": "7628532c780745f0b06926fecba4c885",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0b8227631269474badbf35ca3d7dfd93",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "66ef2d9886284809af869713b83665ec",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6facdfcdc3c64e37aa54c0ec9d5b6115",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ff72c581c354324950213ee60a3d5c7",
+          "Name": "geometry[]",
+          "Description": "List of geometry from the element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Replication": "Auto",
+      "Description": "Returns all geometry associated with an element. Ignores transforms when used with linked elements.\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3ab20acddae94fbc8bb172b50d0c50b8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3d5e51e27f2c4139aa080386ccf9eb35",
+          "Name": "curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1619ab51901c49e1b1303b339f8f932f",
+          "Name": "startLevel",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7d653292f9c4f01b1cbd58903de3bdc",
+          "Name": "endLevel",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e4926479d6934b95bba5c6ef5cf74619",
+          "Name": "wallType",
+          "Description": "WallType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "49beef5090a8477fa7176692bd5359b8",
+          "Name": "Wall",
+          "Description": "Wall",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Wall.ByCurveAndLevels@Autodesk.DesignScript.Geometry.Curve,Revit.Elements.Level,Revit.Elements.Level,Revit.Elements.WallType",
+      "Replication": "Auto",
+      "Description": "Create a Revit Wall from a guiding Curve, start Level, end Level, and WallType\n\nWall.ByCurveAndLevels (curve: Curve, startLevel: Level, endLevel: Level, wallType: WallType): Wall"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d4265e8de505485788254f1fb5b0aa22",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c9053f12427d4c7fbc3ac0978d7b4138",
+          "Name": "polyCurve",
+          "Description": "Autodesk.DesignScript.Geometry.PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ccbb6089937e47049e16fd781b2ef0f3",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.Curves",
+      "Replication": "Auto",
+      "Description": "Returns curves of the polycurve\n\nPolyCurve.Curves ( ): Curve[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4a0e2dbe974c4784b6be7095d925238e",
+      "End": "6facdfcdc3c64e37aa54c0ec9d5b6115",
+      "Id": "b5c804049f3e4e36b776e2d50c74ed24",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "94db250ab90040aeb0ae9eae5d575b34",
+      "End": "e4926479d6934b95bba5c6ef5cf74619",
+      "Id": "9769d5d6ab1c4ed982d3197e4e9dab01",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b4dac71a9dcf42d89931203c01cf5a2c",
+      "End": "1619ab51901c49e1b1303b339f8f932f",
+      "Id": "0b7c325041984fa9b97d6ae8e1380e13",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0b8227631269474badbf35ca3d7dfd93",
+      "End": "f7d653292f9c4f01b1cbd58903de3bdc",
+      "Id": "e36552298af14c7f86b844d16fe49911",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ff72c581c354324950213ee60a3d5c7",
+      "End": "c9053f12427d4c7fbc3ac0978d7b4138",
+      "Id": "430043d3c5394b0b9957dde52ccaec5e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ccbb6089937e47049e16fd781b2ef0f3",
+      "End": "3d5e51e27f2c4139aa080386ccf9eb35",
+      "Id": "fc095bb0ce724f1f801d8b0ae58edc69",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "10.3",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "3ab20acd-dae9-4fbc-8bb1-72b50d0c50b8",
+      "Binding": {
+        "ByCurveAndLevels_InClassDecl-1_InFunctionScope-1_Instance0_3ab20acd-dae9-4fbc-8bb1-72b50d0c50b8": "H4sIAAAAAAAACrWasW7cMBBE/0W1D1hSIlfrOo3rlD4XOkkM0rhI3Bn+98Aqw1cO4cYuvDhwOfOWO/f6Ob2ffz/O48f2sU3Pr92fx/XL9Hmffn78+f3+6+XHfXq+T0sre8xz3ObS1ttSy3rbljPdzjmWstet1D3dzFJEXet9erpPL+8f1/+m6jXm5Wv6epJUd6heZNVXqF5l1QOqu6r6uf9f3U332c8Dqn9/9rfv+vpLtMFRrbJGPKB6yKp3jaixmKx614gaS5K1+YQ2y879bFBddu7N+uq6c28JqqdxAugaUWPJskvUNaLGMquqR9eIGouMANE1osYiI0BkqC5z0ZihuowAsUB1mXijQPUYJoAAFBeZAAJQXHQCAHoVnQCAXkUnAKBX0QkA6FV0AgDTLDIBtM4a3C5LHiQA8Ogig+UGHl1lsNzAo6tsSNnAo6vMGjbw6Cqzhg08usqsYQOPrjJr2OBlV2XW0Lpzd9PNJK07d7drJhkj3g2eqVXmcxuwscp8bgM2Vp3xABtdZzzARpcZT+vk5aYbPVsnLzfd6Nm6G+mmGz1bdyPdrtFzkLxgSHEdAWBIcR0BYEhxHQFgavAyrBEPAM4q09sDgLPK2vwAj15lbX6AR6/jgPOAO7vKTPsBdzZkpv2AOxuyS7TDpBvjxvYdFBEyn91BESEj/w6KCNkl2oERJrtEeze1uNm4/dzeDRpuJjOPHXb5JmPEDrt8k40xO6yQTTbG7LBCNpm8Dlghm26BAFf02qBpqneDtVvRrb/hvpdx8jpg226yozpgk5NkR3XAQzbJcHbAQzaNw9kBpp1kaj5AEUmnZlBEkqn5AEWkcfvwA4wvy4BzgvFlGXBOUHOWAecENec6rBEnyDvrUnyQd9YFsLDAyDJbPWGBMdu4RoA1zbLX4QnWNOv0Btak+5LMCdak+5JMg+FUl8w1GE51yVyD4VSXzDXw6CuZGyIANzBtWVTnBqYti+rcwLRlUZ0bePSVnQ1qBJi2LExzA9OWhWluYNqyMM0Nts6yMM0NCCAL09yAALIwzQ0IIAvT3IAAsvzJDQggy5/cgAB1oHgBCbJAyg2QIAukPAEBZDmIJyDAlYOMaUQCJMiCEU+AhCsY0VQHArhMzQkI4DI1JyCAy9ScgACuenJ4AgKsw54cngAJsrjLEyBBFnd5AiTI4i5PgIQr7tJUBySsOvECAVadeIEAq0y8GQiwDgvePQMSZDGjZyCALGb0DASQxYyegQBXzKipDgQImXgzECBk4s1AgJCJNwMBQibeDIZ/pblv3z//AFMtoMlONQAA"
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.1.5050",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "4e9651a5c06c4e89a45f18f6c67fdb4a",
+        "Name": "cad block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 93.07574383653349,
+        "Y": 257.138199485198
+      },
+      {
+        "Id": "dc39d9ca48ce47c68c8385b8e6b3d086",
+        "Name": "Wall Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 40.68797715401428,
+        "Y": 622.8688776843796
+      },
+      {
+        "Id": "e4c59aeba55f443fb95aa40c7122024c",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 65.19105348381032,
+        "Y": 393.46415086989265
+      },
+      {
+        "Id": "7628532c780745f0b06926fecba4c885",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 66.62367203820259,
+        "Y": 509.1362856887717
+      },
+      {
+        "Id": "66ef2d9886284809af869713b83665ec",
+        "Name": "Element.Geometry",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 338.71334999629977,
+        "Y": 253.7565026012149
+      },
+      {
+        "Id": "3ab20acddae94fbc8bb172b50d0c50b8",
+        "Name": "Wall.ByCurveAndLevels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1216.2221088338154,
+        "Y": 289.49895294981167
+      },
+      {
+        "Id": "d4265e8de505485788254f1fb5b0aa22",
+        "Name": "PolyCurve.Curves",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 631.5264197274126,
+        "Y": 261.6301525844913
+      }
+    ],
+    "Annotations": [],
+    "X": 1.3783951754766122,
+    "Y": -163.30666789661967,
+    "Zoom": 0.691090973347593
+  }
+}
