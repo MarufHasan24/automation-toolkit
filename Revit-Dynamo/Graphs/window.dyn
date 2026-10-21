@@ -1,0 +1,1283 @@
+{
+  "Uuid": "4673700c-5348-49f6-8aeb-c4377dcd2a79",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "window",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementsSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af451",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af452",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af453",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af454",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af455",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af456",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af457",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af458",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af459",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45a",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45b",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45c",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45d",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45e",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af45f",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af460",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af461",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af462",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af463",
+        "3fbb27c1-a757-480e-98ac-0636e0f9b20b-001af464"
+      ],
+      "Id": "fb8c5769387242c6b76b601947531886",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0dfdb0e96e0849f983f54ed7a8dc694e",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "42a806603c114492a710384b067c0ab4",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "714619ad5529465294dbb884f66a18b6",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bad65ac049e5447099fd2efe34ced0f7",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32ff264c88d0489a86f8b8b24bc359e7",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5578fbebfbf848089c4fe2f42382883c",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 719,
+      "SelectedString": "M_Window-Fixed:750 x 1650mm",
+      "Id": "91320d6f2bcc42c785fddf31ad63117b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c3659345e8ad4f71b337850d6fe6052a",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 715,
+      "SelectedString": "M_Window-Double-Hung:700 x 1200mm",
+      "Id": "ec724685b2e24b33a623259d41c43a56",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1d43a4edd33c436bad4530364f4612e6",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "\r\nimport clr\r\nimport random\r\nimport math\r\n\r\nclr.AddReference(\"RevitServices\")\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nclr.AddReference(\"RevitAPI\")\r\nfrom Autodesk.Revit.DB import *\r\nfrom Autodesk.Revit.DB.Structure import StructuralType\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# ============================================================\r\n# INPUTS\r\n# IN[0]  = Facade walls (may have different heights)\r\n# IN[1]  = Window Family Types list\r\n# IN[2]  = Shading fin Wall Type\r\n# IN[3]  = Minimum gap (mm)\r\n# IN[4]  = Edge clearance (mm)\r\n# IN[5]  = Minimum sill height (mm)\r\n# IN[6]  = Maximum sill height (mm)\r\n# IN[7]  = Minimum fin height (mm)\r\n# IN[8]  = Maximum fin height (mm)\r\n# IN[9]  = Minimum fin projection (mm)\r\n# IN[10] = Maximum fin projection (mm)\r\n# IN[11] = Probability of fin, e.g. 0.10\r\n# IN[12] = Random seed\r\n# IN[13] = Level list L1-L7\r\n# ============================================================\r\n\r\ndef as_list(value):\r\n    if value is None:\r\n        return []\r\n    if isinstance(value, list):\r\n        return [UnwrapElement(x) for x in value if x is not None]\r\n    return [UnwrapElement(value)]\r\n\r\nwalls = as_list(IN[0])\r\nwindow_types = as_list(IN[1])\r\nfin_type = UnwrapElement(IN[2])\r\nmin_gap = float(IN[3]) / 304.8\r\nedge_clearance = float(IN[4]) / 304.8\r\nmin_sill = float(IN[5]) / 304.8\r\nmax_sill = float(IN[6]) / 304.8\r\nmin_fin_height = float(IN[7]) / 304.8\r\nmax_fin_height = float(IN[8]) / 304.8\r\nmin_fin_depth = float(IN[9]) / 304.8\r\nmax_fin_depth = float(IN[10]) / 304.8\r\nfin_probability = max(0.0, min(1.0, float(IN[11])))\r\nseed = int(IN[12])\r\nlevels = sorted(as_list(IN[13]), key=lambda x: x.Elevation)\r\n\r\nCOVERAGE_TARGET = float(IN[14])\r\nTOL = 1.0 / 304.8  # 1 mm in Revit internal feet\r\nMAX_ATTEMPTS_PER_WALL = 500\r\nrng = random.Random(seed)\r\n\r\n# ============================================================\r\n# VALIDATE INPUTS\r\n# ============================================================\r\n\r\nif not walls:\r\n    raise Exception(\"IN[0]: Select facade walls.\")\r\n\r\nif not window_types:\r\n    raise Exception(\"IN[1]: Select loaded window family types.\")\r\n\r\nif not isinstance(fin_type, WallType):\r\n    raise Exception(\"IN[2]: Select a valid wall type for shading fins.\")\r\n\r\nif not levels:\r\n    raise Exception(\"IN[13]: Connect the level list L1-L7.\")\r\n\r\nif min_gap < 0 or edge_clearance < 0:\r\n    raise Exception(\"Gap and edge clearance must be non-negative.\")\r\n\r\nif min_sill < 0 or max_sill < min_sill:\r\n    raise Exception(\"Check the sill height range.\")\r\n\r\nif min_fin_height <= 0 or max_fin_height < min_fin_height:\r\n    raise Exception(\"Check the fin height range.\")\r\n\r\nif min_fin_depth <= 0 or max_fin_depth < min_fin_depth:\r\n    raise Exception(\"Check the fin projection range.\")\r\n\r\n# ============================================================\r\n# WINDOW TYPE DIMENSIONS\r\n# ============================================================\r\n\r\ndef get_dimension(symbol, names):\r\n    for name in names:\r\n        try:\r\n            p = symbol.LookupParameter(name)\r\n            if p and p.StorageType == StorageType.Double:\r\n                value = p.AsDouble()\r\n                if value > 0:\r\n                    return value\r\n        except:\r\n            pass\r\n    return None\r\n\r\nwindow_options = []\r\n\r\nfor symbol in window_types:\r\n    if not isinstance(symbol, FamilySymbol):\r\n        continue\r\n\r\n    width = get_dimension(\r\n        symbol, [\"Width\", \"Rough Width\", \"width\", \"rough width\"]\r\n    )\r\n    height = get_dimension(\r\n        symbol, [\"Height\", \"Rough Height\", \"height\", \"rough height\"]\r\n    )\r\n\r\n    if width and height:\r\n        window_options.append({\r\n            \"symbol\": symbol,\r\n            \"width\": width,\r\n            \"height\": height\r\n        })\r\n\r\nif not window_options:\r\n    raise Exception(\r\n        \"No usable window types found. Each type needs numeric Width \"\r\n        \"and Height parameters. Add your family's actual parameter \"\r\n        \"names to get_dimension() if necessary.\"\r\n    )\r\n\r\n# ============================================================\r\n# GEOMETRY HELPERS\r\n# ============================================================\r\n\r\ndef get_wall_axis(wall):\r\n    curve = wall.Location.Curve\r\n    p0 = curve.GetEndPoint(0)\r\n    p1 = curve.GetEndPoint(1)\r\n    return p0, (p1 - p0).Normalize(), curve.Length\r\n\r\ndef point_at(p0, direction, station, z):\r\n    return XYZ(\r\n        p0.X + direction.X * station,\r\n        p0.Y + direction.Y * station,\r\n        z\r\n    )\r\n\r\ndef id_key(element):\r\n    return str(element.Id)\r\n\r\ndef bbox_interval(element, p0, direction):\r\n    bbox = element.get_BoundingBox(None)\r\n    if bbox is None:\r\n        return None\r\n\r\n    projections = []\r\n    for x in (bbox.Min.X, bbox.Max.X):\r\n        for y in (bbox.Min.Y, bbox.Max.Y):\r\n            for z in (bbox.Min.Z, bbox.Max.Z):\r\n                pt = XYZ(x, y, z)\r\n                delta = pt - p0\r\n                projections.append(\r\n                    delta.X * direction.X +\r\n                    delta.Y * direction.Y\r\n                )\r\n\r\n    return {\r\n        \"left\": min(projections),\r\n        \"right\": max(projections),\r\n        \"bottom\": bbox.Min.Z,\r\n        \"top\": bbox.Max.Z\r\n    }\r\n\r\ndef interval_conflict(a, b, gap):\r\n    horizontal = (\r\n        a[\"left\"] < b[\"right\"] + gap - TOL and\r\n        a[\"right\"] > b[\"left\"] - gap + TOL\r\n    )\r\n    vertical = (\r\n        a[\"bottom\"] < b[\"top\"] - TOL and\r\n        a[\"top\"] > b[\"bottom\"] + TOL\r\n    )\r\n    return horizontal and vertical\r\n\r\ndef get_floor_zones(wall):\r\n    bbox = wall.get_BoundingBox(None)\r\n    if bbox is None:\r\n        return []\r\n\r\n    wall_bottom = bbox.Min.Z\r\n    wall_top = bbox.Max.Z\r\n\r\n    usable_levels = [\r\n        lv for lv in levels\r\n        if lv.Elevation >= wall_bottom - TOL\r\n        and lv.Elevation < wall_top - TOL\r\n    ]\r\n\r\n    zones = []\r\n\r\n    for i, level in enumerate(usable_levels):\r\n        base = max(wall_bottom, level.Elevation)\r\n\r\n        if i + 1 < len(usable_levels):\r\n            top = min(wall_top, usable_levels[i + 1].Elevation)\r\n        else:\r\n            top = wall_top\r\n\r\n        if top - base > TOL:\r\n            zones.append({\r\n                \"level\": level,\r\n                \"base\": base,\r\n                \"top\": top\r\n            })\r\n\r\n    return zones\r\n\r\n# ============================================================\r\n# LEVEL-BY-LEVEL PLANNING\r\n# For each level, process all wall zones before advancing.\r\n# Coverage is measured per wall per floor zone.\r\n# Gaps do not count as occupied facade.\r\n# ============================================================\r\n\r\nplans = []\r\nskipped = []\r\nlevel_report = []\r\n\r\nfor level in levels:\r\n    level_candidates = []\r\n\r\n    for wall in walls:\r\n        if not isinstance(wall, Wall):\r\n            continue\r\n\r\n        if not isinstance(wall.Location, LocationCurve):\r\n            skipped.append(\"Invalid wall location: \" + id_key(wall))\r\n            continue\r\n\r\n        if not isinstance(wall.Location.Curve, Line):\r\n            skipped.append(\"Curved wall skipped: \" + id_key(wall))\r\n            continue\r\n\r\n        bbox = wall.get_BoundingBox(None)\r\n        if bbox is None:\r\n            continue\r\n\r\n        p0, direction, length = get_wall_axis(wall)\r\n        if length <= 0:\r\n            continue\r\n\r\n        # Process this wall only if the current level defines one\r\n        # of its floor zones.\r\n        zones = get_floor_zones(wall)\r\n        zone = None\r\n\r\n        for z in zones:\r\n            if id_key(z[\"level\"]) == id_key(level):\r\n                zone = z\r\n                break\r\n\r\n        if zone is None:\r\n            continue\r\n\r\n        normal = wall.Orientation\r\n        normal = XYZ(normal.X, normal.Y, 0)\r\n\r\n        if normal.GetLength() < 0.000001:\r\n            skipped.append(\"Invalid wall normal: \" + id_key(wall))\r\n            continue\r\n\r\n        normal = normal.Normalize()\r\n\r\n        usable_length = length - 2.0 * edge_clearance\r\n        if usable_length <= TOL:\r\n            skipped.append(\"No usable length: \" + id_key(wall))\r\n            continue\r\n\r\n        floor_height = zone[\"top\"] - zone[\"base\"]\r\n        station = edge_clearance\r\n        occupied = 0.0\r\n        target = usable_length * COVERAGE_TARGET\r\n        attempts = 0\r\n        wall_plans = []\r\n\r\n        while occupied < target and attempts < MAX_ATTEMPTS_PER_WALL:\r\n            attempts += 1\r\n\r\n            remaining = length - edge_clearance - station\r\n            if remaining <= TOL:\r\n                break\r\n\r\n            # Randomly decide whether this candidate is a fin.\r\n            choose_fin = rng.random() < fin_probability\r\n\r\n            fitting_windows = [\r\n                item for item in window_options\r\n                if item[\"height\"] + min_sill <= floor_height + TOL\r\n            ]\r\n\r\n            if not fitting_windows:\r\n                choose_fin = True\r\n\r\n            if choose_fin:\r\n                # Fin thickness occupies facade width; projection is\r\n                # perpendicular and does not count as facade coverage.\r\n                fin_footprint = fin_type.Width\r\n\r\n                if fin_footprint + min_gap > remaining:\r\n                    break\r\n\r\n                fin_height = min(\r\n                    rng.uniform(min_fin_height, max_fin_height),\r\n                    floor_height\r\n                )\r\n\r\n                if fin_height <= TOL:\r\n                    break\r\n\r\n                candidate = {\r\n                    \"kind\": \"fin\",\r\n                    \"wall\": wall,\r\n                    \"level\": level,\r\n                    \"p0\": p0,\r\n                    \"direction\": direction,\r\n                    \"normal\": normal,\r\n                    \"station\": station + fin_footprint / 2.0,\r\n                    \"base\": zone[\"base\"],\r\n                    \"height\": fin_height,\r\n                    \"depth\": rng.uniform(min_fin_depth, max_fin_depth),\r\n                    \"footprint\": fin_footprint\r\n                }\r\n\r\n            else:\r\n                item = rng.choice(fitting_windows)\r\n                width = item[\"width\"]\r\n                height = item[\"height\"]\r\n\r\n                if width + min_gap > remaining:\r\n                    break\r\n\r\n                sill_max = min(max_sill, floor_height - height)\r\n                if sill_max < min_sill:\r\n                    break\r\n\r\n                sill = rng.uniform(min_sill, sill_max)\r\n\r\n                candidate = {\r\n                    \"kind\": \"window\",\r\n                    \"wall\": wall,\r\n                    \"level\": level,\r\n                    \"p0\": p0,\r\n                    \"direction\": direction,\r\n                    \"station\": station + width / 2.0,\r\n                    \"base\": zone[\"base\"],\r\n                    \"point\": point_at(\r\n                        p0, direction, station + width / 2.0,\r\n                        zone[\"base\"] + sill\r\n                    ),\r\n                    \"symbol\": item[\"symbol\"],\r\n                    \"width\": width,\r\n                    \"height\": height,\r\n                    \"sill\": sill,\r\n                    \"footprint\": width\r\n                }\r\n\r\n            # Candidate is appended; next candidate starts after its\r\n            # facade footprint plus the required gap.\r\n            wall_plans.append(candidate)\r\n            occupied += candidate[\"footprint\"]\r\n            station += candidate[\"footprint\"] + min_gap\r\n\r\n        plans.extend(wall_plans)\r\n\r\n        level_candidates.append({\r\n            \"wall_id\": id_key(wall),\r\n            \"usable_length_ft\": usable_length,\r\n            \"target_coverage\": COVERAGE_TARGET,\r\n            \"planned_coverage\": (\r\n                occupied / usable_length if usable_length > 0 else 0\r\n            ),\r\n            \"candidate_count\": len(wall_plans)\r\n        })\r\n\r\n    level_report.append({\r\n        \"level\": level.Name,\r\n        \"walls\": level_candidates\r\n    })\r\n\r\n# ============================================================\r\n# RESERVE FINS BEFORE WINDOW PLACEMENT\r\n# Reject windows whose nominal footprint conflicts with a fin.\r\n# ============================================================\r\n\r\nplanned_fins = [p for p in plans if p[\"kind\"] == \"fin\"]\r\nvalid_plans = []\r\n\r\nfor plan in plans:\r\n    if plan[\"kind\"] == \"fin\":\r\n        valid_plans.append(plan)\r\n        continue\r\n\r\n    win_left = plan[\"station\"] - plan[\"width\"] / 2.0\r\n    win_right = plan[\"station\"] + plan[\"width\"] / 2.0\r\n    win_bottom = plan[\"base\"] + plan[\"sill\"]\r\n    win_top = win_bottom + plan[\"height\"]\r\n\r\n    blocked = False\r\n\r\n    for fin in planned_fins:\r\n        if id_key(fin[\"wall\"]) != id_key(plan[\"wall\"]):\r\n            continue\r\n\r\n        fin_left = fin[\"station\"] - fin[\"footprint\"] / 2.0\r\n        fin_right = fin[\"station\"] + fin[\"footprint\"] / 2.0\r\n        fin_bottom = fin[\"base\"]\r\n        fin_top = fin_bottom + fin[\"height\"]\r\n\r\n        horizontal = (\r\n            win_left < fin_right + min_gap and\r\n            win_right > fin_left - min_gap\r\n        )\r\n        vertical = (\r\n            win_bottom < fin_top and\r\n            win_top > fin_bottom\r\n        )\r\n\r\n        if horizontal and vertical:\r\n            blocked = True\r\n            break\r\n\r\n    if not blocked:\r\n        valid_plans.append(plan)\r\n\r\n# ============================================================\r\n# CREATE FIN WALLS FIRST, THEN WINDOWS\r\n# ============================================================\r\n\r\ncreated_windows = []\r\ncreated_fins = []\r\nwindow_records = []\r\nfin_records = []\r\nerrors = []\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\ntry:\r\n    symbols = {}\r\n    for plan in valid_plans:\r\n        if plan[\"kind\"] == \"window\":\r\n            symbols[id_key(plan[\"symbol\"])] = plan[\"symbol\"]\r\n\r\n    for symbol in symbols.values():\r\n        if not symbol.IsActive:\r\n            symbol.Activate()\r\n\r\n    doc.Regenerate()\r\n\r\n    # Create fins first.\r\n    for plan in valid_plans:\r\n        if plan[\"kind\"] != \"fin\":\r\n            continue\r\n\r\n        try:\r\n            level_z = plan[\"level\"].Elevation\r\n            offset = plan[\"base\"] - level_z\r\n\r\n            start = point_at(\r\n                plan[\"p0\"], plan[\"direction\"], plan[\"station\"],\r\n                level_z\r\n            )\r\n            end = start + plan[\"normal\"] * plan[\"depth\"]\r\n\r\n            fin = Wall.Create(\r\n                doc,\r\n                Line.CreateBound(start, end),\r\n                fin_type.Id,\r\n                plan[\"level\"].Id,\r\n                plan[\"height\"],\r\n                offset,\r\n                False,\r\n                False\r\n            )\r\n\r\n            doc.Regenerate()\r\n\r\n            actual = bbox_interval(\r\n                fin, plan[\"p0\"], plan[\"direction\"]\r\n            )\r\n\r\n            created_fins.append(fin)\r\n\r\n            if actual:\r\n                fin_records.append({\r\n                    \"wall_id\": id_key(plan[\"wall\"]),\r\n                    \"interval\": actual\r\n                })\r\n\r\n        except Exception as ex:\r\n            errors.append(\"Fin placement failed: \" + str(ex))\r\n\r\n    # Create windows and reject actual bounding-box conflicts.\r\n    for plan in valid_plans:\r\n        if plan[\"kind\"] != \"window\":\r\n            continue\r\n\r\n        instance = None\r\n\r\n        try:\r\n            instance = doc.Create.NewFamilyInstance(\r\n                plan[\"point\"],\r\n                plan[\"symbol\"],\r\n                plan[\"wall\"],\r\n                StructuralType.NonStructural\r\n            )\r\n\r\n            doc.Regenerate()\r\n\r\n            actual = bbox_interval(\r\n                instance, plan[\"p0\"], plan[\"direction\"]\r\n            )\r\n\r\n            conflict = actual is None\r\n\r\n            if actual:\r\n                # Ensure actual geometry stays inside the wall edges.\r\n                wall_length = plan[\"wall\"].Location.Curve.Length\r\n\r\n                if (\r\n                    actual[\"left\"] < edge_clearance - TOL or\r\n                    actual[\"right\"] > wall_length - edge_clearance + TOL\r\n                ):\r\n                    conflict = True\r\n\r\n                # Window-to-window spacing.\r\n                for rec in window_records:\r\n                    if rec[\"wall_id\"] != id_key(plan[\"wall\"]):\r\n                        continue\r\n                    if interval_conflict(\r\n                        actual, rec[\"interval\"], min_gap\r\n                    ):\r\n                        conflict = True\r\n                        break\r\n\r\n                # Window-to-fin exclusion.\r\n                for rec in fin_records:\r\n                    if rec[\"wall_id\"] != id_key(plan[\"wall\"]):\r\n                        continue\r\n                    if interval_conflict(\r\n                        actual, rec[\"interval\"], min_gap\r\n                    ):\r\n                        conflict = True\r\n                        break\r\n\r\n            if conflict:\r\n                doc.Delete(instance.Id)\r\n                errors.append(\r\n                    \"Rejected window due to actual overlap or edge clearance: \"\r\n                    + id_key(plan[\"wall\"])\r\n                )\r\n            else:\r\n                created_windows.append(instance)\r\n                window_records.append({\r\n                    \"wall_id\": id_key(plan[\"wall\"]),\r\n                    \"interval\": actual\r\n                })\r\n\r\n        except Exception as ex:\r\n            if instance is not None:\r\n                try:\r\n                    doc.Delete(instance.Id)\r\n                except:\r\n                    pass\r\n            errors.append(\"Window placement failed: \" + str(ex))\r\n\r\nfinally:\r\n    TransactionManager.Instance.TransactionTaskDone()\r\n\r\n# ============================================================\r\n# OUTPUT\r\n# ============================================================\r\n\r\nOUT = {\r\n    \"WindowsCreated\": created_windows,\r\n    \"ShadingFinsCreated\": created_fins,\r\n    \"LevelCoveragePlan\": level_report,\r\n    \"PlannedCandidates\": len(plans),\r\n    \"CandidatesAfterFinChecks\": len(valid_plans),\r\n    \"Errors\": errors,\r\n    \"SkippedWalls\": skipped\r\n}",
+      "Engine": "PythonNet3",
+      "VariableInputPorts": true,
+      "Id": "8d15694783aa4e079ad189f3c7d3306e",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "df5664faae9646c3828e5d24a2d27f23",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d5bb1a3424dc46a5850689d12017abe2",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "89d98431d8354fb68045110b23ed679a",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f807f5580b274a56b685a3d00c156eca",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "163bf6e7c76c4f849592cd2e59a7638b",
+          "Name": "IN[4]",
+          "Description": "Input #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e83baf28ae69405fa194862d7ca72450",
+          "Name": "IN[5]",
+          "Description": "Input #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0ec9a1d049344b95ae36de82401c8d38",
+          "Name": "IN[6]",
+          "Description": "Input #6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35cd794751954978883326a64c3f4558",
+          "Name": "IN[7]",
+          "Description": "Input #7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7cb8d75c891e4b0d8e8d8574680c67d4",
+          "Name": "IN[8]",
+          "Description": "Input #8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9f8b6352e214ecb85357d09a021379e",
+          "Name": "IN[9]",
+          "Description": "Input #9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9bbe3892be784672ba6ed835fa601df2",
+          "Name": "IN[10]",
+          "Description": "Input #10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "98ad699c6a1642f0bf7f59c898f7dfae",
+          "Name": "IN[11]",
+          "Description": "Input #11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bfdcdb76ca8d4801808c47d32425c1da",
+          "Name": "IN[12]",
+          "Description": "Input #12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b5270ebd8a8e4dd9a187e73e7531ce85",
+          "Name": "IN[13]",
+          "Description": "Input #13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f424c343121647f2941d38518ef10f24",
+          "Name": "IN[14]",
+          "Description": "Input #14",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3d7cc9bc5cf94991bebfb747e19c38cc",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "4c4821e8ab1149a0bb6edb42ecdb6960",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "48a30f38e8c04907a48d031b5811be24",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 300.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "37b19ca716be400bbdcddfe68ae8af9c",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "53ff8827f86447a8994767e3b689e751",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 600.0
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 709,
+      "SelectedString": "M_Window-Casement-Double:1050 x 1350mm",
+      "Id": "55566d439b8743d9b67db4ffcfd08443",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "68126784ac26474fb493b32514177a95",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 17,
+      "SelectedString": "Generic - 200mm Filled",
+      "Id": "65dbc7e3fc2f46f088bef83d2f02e1f2",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c6796af5a76d413c8e993631f77c36e6",
+          "Name": "Wall Type",
+          "Description": "The selected Wall Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All wall types available in the document."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "6e8b2f9dd0f34bc988a899c8e1d5d6f4",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c37aeb24209f4643904cd074b359aa96",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 1200.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "a8cd85b3ee554c268fadb22c54382a18",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "38f8469e152741189ecdd35ec6553361",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 600.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "bb59c69fb5944bd4b31ee75024ba6c77",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd1af146ccc04daaa76c3e49a5ee13f0",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 1200.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "4672938d010c4f7da1442e01a9e1949d",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "97c004071a684f419232d1004414c706",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 600.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "46eee38e0e3e49529c94a5fa97beb68a",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5005effb66aa401d8db22dbcf71cbfd3",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 9000.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "ce307f2a7440490ebc724383ee659c89",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3a315c3b89164f7f8d5b48bd9b45e0fb",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number.",
+      "InputValue": 3000.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.05,
+      "Id": "8fcfddb96b064e269a7fc82ba1d65d5a",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d2ef431c6e2d40f5977917e54c71ed51",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.25
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 100,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "890f37fa0b774452bd97dac94d944c2f",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1f08cb951b18438293b14fe03e7738b5",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 47
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "ed83fccc0d914a2389fb6340d4e298ea",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "a995d1a847c5491587318da27fc86713",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b95bee128bb040a58c4fe724cd59177b",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7130d62c04524fa895b8dba6e66dafce",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d6fb294241a44091a46e5a8f059d8dc3",
+          "Name": "item3",
+          "Description": "Item Index #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bae47adda8f6428f9bde2946160fe5c8",
+          "Name": "item4",
+          "Description": "Item Index #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "95bf95fa25fe419bb719e789e4bfd102",
+          "Name": "item5",
+          "Description": "Item Index #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9e77446ee5714145b62b0ec9c6e9a844",
+          "Name": "item6",
+          "Description": "Item Index #6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f320f04fd7794e95b0e230ee57db7c6e",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "L1",
+      "Id": "5c6848c7ef864b68a48acabd074cce72",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "546b295fcd1d42858109f70634a939ec",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 6,
+      "SelectedString": "L2",
+      "Id": "13fa5e1defcd40379ee08663fd79ca34",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2b4b38b469946b39137426f934ebaae",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 7,
+      "SelectedString": "L3",
+      "Id": "84fc7e55bad34e248ad586c24bc512fa",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "aaabe8b5a6634455bb473deb7927861d",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 10,
+      "SelectedString": "L6",
+      "Id": "4c4605edca7c47ab8b27fcf9ec31d8ff",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a2f1efe3a5724e378d71c05e47ff4ef7",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 9,
+      "SelectedString": "L5",
+      "Id": "c8df25bc9ef84b15835839f22d5e20b1",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "11bf414b4b0345b68dcb5c4b6afaab84",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 8,
+      "SelectedString": "L4",
+      "Id": "1c696da6e48245fa9a2b5c8a51166f05",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4e88f39d630940ddb947bf33a941eb4c",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 11,
+      "SelectedString": "L7",
+      "Id": "83da3dd2d5bb431da108ca54c12f7d2e",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "16d55b8da30541a6ac16c24b0db347f0",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.05,
+      "Id": "341a809410ff42d984aa43db52e2bd23",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a38b309315e24e7288ea27fb37114e5f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.75
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0dfdb0e96e0849f983f54ed7a8dc694e",
+      "End": "df5664faae9646c3828e5d24a2d27f23",
+      "Id": "6ea785ecb9ca42ca971b0063813304a4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5578fbebfbf848089c4fe2f42382883c",
+      "End": "d5bb1a3424dc46a5850689d12017abe2",
+      "Id": "b05b11607d694b8d978fb04c5b2a2bb5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c3659345e8ad4f71b337850d6fe6052a",
+      "End": "714619ad5529465294dbb884f66a18b6",
+      "Id": "3a9a79db5206443abe6e2b7e11baabe3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1d43a4edd33c436bad4530364f4612e6",
+      "End": "bad65ac049e5447099fd2efe34ced0f7",
+      "Id": "cbed67b89447478589d73b467f938967",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "48a30f38e8c04907a48d031b5811be24",
+      "End": "f807f5580b274a56b685a3d00c156eca",
+      "Id": "a3c26255dac949ad818003d528af5402",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "53ff8827f86447a8994767e3b689e751",
+      "End": "163bf6e7c76c4f849592cd2e59a7638b",
+      "Id": "d8b780ea2e45466aaeb83fa0119ab895",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68126784ac26474fb493b32514177a95",
+      "End": "32ff264c88d0489a86f8b8b24bc359e7",
+      "Id": "6345951025cc4af1bddb791fca3253c2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c6796af5a76d413c8e993631f77c36e6",
+      "End": "89d98431d8354fb68045110b23ed679a",
+      "Id": "de08c21388ba4f2ca77b23d6ad75a9f1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c37aeb24209f4643904cd074b359aa96",
+      "End": "0ec9a1d049344b95ae36de82401c8d38",
+      "Id": "e9203f783b7341d18d8324d83850cf64",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "38f8469e152741189ecdd35ec6553361",
+      "End": "e83baf28ae69405fa194862d7ca72450",
+      "Id": "0d270326d50746c0b1eb7ee7d166249e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd1af146ccc04daaa76c3e49a5ee13f0",
+      "End": "9bbe3892be784672ba6ed835fa601df2",
+      "Id": "0213fcead1e84e87a33630d3694b9fc3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "97c004071a684f419232d1004414c706",
+      "End": "c9f8b6352e214ecb85357d09a021379e",
+      "Id": "425c94cc0bc04a63940d2ec4babb1e68",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5005effb66aa401d8db22dbcf71cbfd3",
+      "End": "7cb8d75c891e4b0d8e8d8574680c67d4",
+      "Id": "62ce865ffd9249368cc3d2f4f23696da",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3a315c3b89164f7f8d5b48bd9b45e0fb",
+      "End": "35cd794751954978883326a64c3f4558",
+      "Id": "0b13ae3b79a64913b5878a5d67842a46",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d2ef431c6e2d40f5977917e54c71ed51",
+      "End": "98ad699c6a1642f0bf7f59c898f7dfae",
+      "Id": "b45bab0a3d4f4403bdec3b63b2286e17",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1f08cb951b18438293b14fe03e7738b5",
+      "End": "bfdcdb76ca8d4801808c47d32425c1da",
+      "Id": "8dbde95dce964af1b70916f4532f82fe",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f320f04fd7794e95b0e230ee57db7c6e",
+      "End": "b5270ebd8a8e4dd9a187e73e7531ce85",
+      "Id": "4c62c48ee3f84bef841f42571d1ea60a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "546b295fcd1d42858109f70634a939ec",
+      "End": "a995d1a847c5491587318da27fc86713",
+      "Id": "0d2de019b9424e11a04919f23c98c132",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e2b4b38b469946b39137426f934ebaae",
+      "End": "b95bee128bb040a58c4fe724cd59177b",
+      "Id": "d8da72346f1c4199a0ddd184707e5c21",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "aaabe8b5a6634455bb473deb7927861d",
+      "End": "7130d62c04524fa895b8dba6e66dafce",
+      "Id": "d538890b765e4b6e8e9cefce7c13c5df",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a2f1efe3a5724e378d71c05e47ff4ef7",
+      "End": "95bf95fa25fe419bb719e789e4bfd102",
+      "Id": "d4426688b899424198adfe7eff464beb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "11bf414b4b0345b68dcb5c4b6afaab84",
+      "End": "bae47adda8f6428f9bde2946160fe5c8",
+      "Id": "afef368ae6224a539eb1716aff1927ed",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e88f39d630940ddb947bf33a941eb4c",
+      "End": "d6fb294241a44091a46e5a8f059d8dc3",
+      "Id": "79ecb8c90aaa46c5bae68624c53c6193",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "16d55b8da30541a6ac16c24b0db347f0",
+      "End": "9e77446ee5714145b62b0ec9c6e9a844",
+      "Id": "ef4b3545a3b74be1a3b23496c88445c4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a38b309315e24e7288ea27fb37114e5f",
+      "End": "f424c343121647f2941d38518ef10f24",
+      "Id": "fe6b4e5c0bad4a9ca71c4584cd4e760c",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "10.3",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.1.5050",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -19.541499137878418,
+      "EyeY": 29.724889755249023,
+      "EyeZ": 55.55947494506836,
+      "LookX": 13.394733428955078,
+      "LookY": -14.51095962524414,
+      "LookZ": -64.7412109375,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "fb8c5769387242c6b76b601947531886",
+        "Name": "Select Model Elements",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -27.76088690632173,
+        "Y": -265.89313408104977
+      },
+      {
+        "Id": "42a806603c114492a710384b067c0ab4",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 466.61165172025295,
+        "Y": 91.7571147799006
+      },
+      {
+        "Id": "91320d6f2bcc42c785fddf31ad63117b",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -81.97492327766133,
+        "Y": 75.95901183440564
+      },
+      {
+        "Id": "ec724685b2e24b33a623259d41c43a56",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -140.57654349300714,
+        "Y": 194.94598256113147
+      },
+      {
+        "Id": "8d15694783aa4e079ad189f3c7d3306e",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1698.7039302106032,
+        "Y": 191.0189043069612
+      },
+      {
+        "Id": "4c4821e8ab1149a0bb6edb42ecdb6960",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 431.88958087829275,
+        "Y": 457.61430938682645
+      },
+      {
+        "Id": "37b19ca716be400bbdcddfe68ae8af9c",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 432.65764703656924,
+        "Y": 575.5209935561211
+      },
+      {
+        "Id": "55566d439b8743d9b67db4ffcfd08443",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -183.68814200677383,
+        "Y": 305.79437704801074
+      },
+      {
+        "Id": "65dbc7e3fc2f46f088bef83d2f02e1f2",
+        "Name": "Wall Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -23.03009631998566,
+        "Y": -53.46875305163553
+      },
+      {
+        "Id": "6e8b2f9dd0f34bc988a899c8e1d5d6f4",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 433.5341683572402,
+        "Y": 809.9877507665684
+      },
+      {
+        "Id": "a8cd85b3ee554c268fadb22c54382a18",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 432.7661021989637,
+        "Y": 692.0810665972738
+      },
+      {
+        "Id": "bb59c69fb5944bd4b31ee75024ba6c77",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 434.6028975596844,
+        "Y": 1280.5297623330011
+      },
+      {
+        "Id": "4672938d010c4f7da1442e01a9e1949d",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 433.8348314014079,
+        "Y": 1162.6230781637064
+      },
+      {
+        "Id": "46eee38e0e3e49529c94a5fa97beb68a",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 433.72637623901346,
+        "Y": 1046.063005122554
+      },
+      {
+        "Id": "ce307f2a7440490ebc724383ee659c89",
+        "Name": "Number",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 432.95831008073696,
+        "Y": 928.1563209532592
+      },
+      {
+        "Id": "8fcfddb96b064e269a7fc82ba1d65d5a",
+        "Name": "Number Slider",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 223.33049670777217,
+        "Y": 1400.0760337941642
+      },
+      {
+        "Id": "890f37fa0b774452bd97dac94d944c2f",
+        "Name": "Integer Slider",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 226.5759650756085,
+        "Y": 1520.3247954466906
+      },
+      {
+        "Id": "ed83fccc0d914a2389fb6340d4e298ea",
+        "Name": "levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 414.64915996194645,
+        "Y": 1661.522276860551
+      },
+      {
+        "Id": "5c6848c7ef864b68a48acabd074cce72",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -265.90660716298726,
+        "Y": 1158.602224306804
+      },
+      {
+        "Id": "13fa5e1defcd40379ee08663fd79ca34",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -263.7498638921504,
+        "Y": 1277.1900585339467
+      },
+      {
+        "Id": "84fc7e55bad34e248ad586c24bc512fa",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -261.228856722028,
+        "Y": 1395.0874937393023
+      },
+      {
+        "Id": "4c4605edca7c47ab8b27fcf9ec31d8ff",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -254.95389704482827,
+        "Y": 1748.6346053964585
+      },
+      {
+        "Id": "c8df25bc9ef84b15835839f22d5e20b1",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -257.4749042149507,
+        "Y": 1630.737170191103
+      },
+      {
+        "Id": "1c696da6e48245fa9a2b5c8a51166f05",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -259.6316474857875,
+        "Y": 1512.1493359639599
+      },
+      {
+        "Id": "83da3dd2d5bb431da108ca54c12f7d2e",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -254.7912780620493,
+        "Y": 1865.3596602578664
+      },
+      {
+        "Id": "341a809410ff42d984aa43db52e2bd23",
+        "Name": "Number Slider",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 454.17262965709483,
+        "Y": 2402.5638038141124
+      }
+    ],
+    "Annotations": [],
+    "X": -624.8248446409134,
+    "Y": -3193.6493701391946,
+    "Zoom": 1.3923484843606098
+  }
+}

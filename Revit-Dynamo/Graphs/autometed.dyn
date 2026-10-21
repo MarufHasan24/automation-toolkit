@@ -1,0 +1,444 @@
+{
+  "Uuid": "6bfa8d68-c99d-482f-9efd-384936ce0420",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "autometed",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Id": "59df8301489a41d6acfd48e91214b70b",
+      "Name": "Python Script From String",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Runs a Python script from a string."
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "5c41795b-5294-450c-88c4-06934122dc15-001317db"
+      ],
+      "Id": "415d2460260b49008157d67106edaf94",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "50c6e54cefc943c4a4d860aedd14bf84",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a model element from the document."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "PythonNet3",
+      "VariableInputPorts": true,
+      "Id": "59df8301489a41d6acfd48e91214b70b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "cd95c483c9d540d0a249d20edd60e91d",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60149df3cfb441039f07ac589075c696",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a07e47b377324094ac4ab3facfe5422a",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74fd019585a449dca43b931832cf57db",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fefb7062d4a2423385a90cedf5c9758d",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d24ab6d9ed894cc88c8738a80928a53f",
+          "Name": "IN[4]",
+          "Description": "Input #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "140c5354965e4ce2bd1571a457089809",
+          "Name": "IN[5]",
+          "Description": "Input #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "294f1f5ce41246c09521abf3dce3df5d",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "SerializedWidth": 350.49056603773585,
+      "SerializedHeight": 726.3396226415094,
+      "Id": "67c399af5cb6430a8bda074faa033965",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1cb595a3f4924057a2189b999f50a4a1",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string.",
+      "InputValue": "import clr\r\nimport random\r\nimport math\r\n\r\nclr.AddReference(\"RevitAPI\")\r\nfrom Autodesk.Revit.DB import *\r\n\r\nclr.AddReference(\"RevitServices\")\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n\r\n# ============================================================\r\n# INPUTS\r\n# ============================================================\r\n\r\ncad_element = UnwrapElement(IN[0])\r\nwall_type = UnwrapElement(IN[1])\r\nbase_level = UnwrapElement(IN[2])\r\nmin_level = UnwrapElement(IN[3])\r\nmax_level = UnwrapElement(IN[4])\r\nroof_type = UnwrapElement(IN[5])\r\n\r\n\r\n# ============================================================\r\n# HEIGHT RANGE\r\n# ============================================================\r\n\r\nbase_elev = base_level.Elevation\r\nmin_height = min_level.Elevation - base_elev\r\nmax_height = max_level.Elevation - base_elev\r\n\r\n\r\n# ============================================================\r\n# FIND CLOSED POLYLINES\r\n# ============================================================\r\n\r\nclosed_polylines = []\r\n\r\n\r\ndef collect_geometry(geometry, transform):\r\n\r\n    for geo in geometry:\r\n\r\n        if isinstance(geo, PolyLine):\r\n\r\n            pts = geo.GetCoordinates()\r\n\r\n            if pts is None or len(pts) < 3:\r\n                continue\r\n\r\n            new_pts = []\r\n\r\n            for p in pts:\r\n                new_pts.append(transform.OfPoint(p))\r\n\r\n            # Remove duplicate last point\r\n            if new_pts[0].DistanceTo(new_pts[-1]) < 0.01:\r\n                new_pts = new_pts[:-1]\r\n\r\n            if len(new_pts) >= 3:\r\n                closed_polylines.append(new_pts)\r\n\r\n        elif isinstance(geo, GeometryInstance):\r\n\r\n            new_transform = transform.Multiply(\r\n                geo.Transform\r\n            )\r\n\r\n            collect_geometry(\r\n                geo.GetInstanceGeometry(),\r\n                new_transform\r\n            )\r\n\r\n\r\noptions = Options()\r\noptions.ComputeReferences = False\r\noptions.IncludeNonVisibleObjects = True\r\n\r\ngeometry = cad_element.get_Geometry(options)\r\n\r\nif geometry:\r\n    collect_geometry(\r\n        geometry,\r\n        Transform.Identity\r\n    )\r\n\r\n\r\n# ============================================================\r\n# OUTPUT LISTS\r\n# ============================================================\r\n\r\nall_walls = []\r\nall_roofs = []\r\nheights = []\r\nroof_errors = []\r\n\r\n\r\n# ============================================================\r\n# TRANSACTION\r\n# ============================================================\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\n\r\n# ============================================================\r\n# PROCESS EVERY BLOCK\r\n# ============================================================\r\n\r\nfor block_number, points in enumerate(closed_polylines):\r\n\r\n    # --------------------------------------------------------\r\n    # ONE RANDOM HEIGHT FOR THIS BLOCK\r\n    # --------------------------------------------------------\r\n\r\n    height = random.uniform(\r\n        min_height,\r\n        max_height\r\n    )\r\n\r\n    heights.append(height)\r\n\r\n    block_walls = []\r\n\r\n\r\n    # ========================================================\r\n    # WALLS\r\n    # ========================================================\r\n\r\n    for i in range(len(points)):\r\n\r\n        p1 = points[i]\r\n        p2 = points[(i + 1) % len(points)]\r\n\r\n        if p1.DistanceTo(p2) < 0.01:\r\n            continue\r\n\r\n        try:\r\n\r\n            line = Line.CreateBound(p1, p2)\r\n\r\n            wall = Wall.Create(\r\n                doc,\r\n                line,\r\n                wall_type.Id,\r\n                base_level.Id,\r\n                height,\r\n                0.0,\r\n                False,\r\n                False\r\n            )\r\n\r\n            block_walls.append(wall)\r\n\r\n        except Exception:\r\n            pass\r\n\r\n\r\n    all_walls.append(block_walls)\r\n\r\n\r\n    # ========================================================\r\n    # ROOF\r\n    # ========================================================\r\n\r\n    try:\r\n\r\n        footprint = CurveArray()\r\n\r\n        for i in range(len(points)):\r\n\r\n            p1 = points[i]\r\n            p2 = points[(i + 1) % len(points)]\r\n\r\n            if p1.DistanceTo(p2) < 0.01:\r\n                continue\r\n\r\n            footprint.Append(\r\n                Line.CreateBound(p1, p2)\r\n            )\r\n\r\n\r\n        # ----------------------------------------------------\r\n        # CREATE ROOF\r\n        # ----------------------------------------------------\r\n\r\n        model_curves = ModelCurveArray()\r\n\r\n        result = doc.Create.NewFootPrintRoof(\r\n            footprint,\r\n            base_level,\r\n            roof_type,\r\n            model_curves\r\n        )\r\n\r\n        # PythonNet3 tuple\r\n        roof = result[0]\r\n        model_curves = result[1]\r\n\r\n\r\n        # ----------------------------------------------------\r\n        # MOVE ROOF TO WALL HEIGHT\r\n        # ----------------------------------------------------\r\n\r\n        offset = roof.get_Parameter(\r\n            BuiltInParameter.ROOF_LEVEL_OFFSET_PARAM\r\n        )\r\n\r\n        if offset and not offset.IsReadOnly:\r\n            offset.Set(height)\r\n\r\n\r\n        # ----------------------------------------------------\r\n        # PITCH\r\n        # ----------------------------------------------------\r\n\r\n        for mc in model_curves:\r\n\r\n            try:\r\n\r\n                roof.set_DefinesSlope(\r\n                    mc,\r\n                    True\r\n                )\r\n\r\n                roof.set_SlopeAngle(\r\n                    mc,\r\n                    math.radians(30)\r\n                )\r\n\r\n            except:\r\n                pass\r\n\r\n\r\n        all_roofs.append(roof)\r\n\r\n\r\n    except Exception as e:\r\n\r\n        # Don't stop other buildings\r\n        all_roofs.append(None)\r\n\r\n        roof_errors.append(\r\n            \"Block {} → {}\".format(\r\n                block_number + 1,\r\n                str(e)\r\n            )\r\n        )\r\n\r\n\r\n# ============================================================\r\n# FINISH\r\n# ============================================================\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\n\r\n# ============================================================\r\n# FLATTEN WALLS\r\n# ============================================================\r\n\r\nwalls_flat = []\r\n\r\nfor block in all_walls:\r\n\r\n    for wall in block:\r\n        walls_flat.append(wall)\r\n\r\n\r\n# ============================================================\r\n# OUTPUT\r\n# ============================================================\r\n\r\nOUT = (\r\n    walls_flat,\r\n    all_roofs,\r\n    heights,\r\n    roof_errors\r\n)"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "L1",
+      "Id": "6cb9477ffcca461484b88d2bdfa05603",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "65d683d100904a8ea971ff28034e83b5",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 1,
+      "SelectedString": "L2",
+      "Id": "9b6e675460324363bc1b62d55a7400c0",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fed7c70681ab4cc7a0201fbe6ddf6ce9",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 2,
+      "SelectedString": "L3",
+      "Id": "d45dadb37c134e2196497b6e6a9507db",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "da1345fdbed34436a35f133bd3528dc5",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 32,
+      "SelectedString": "Generic - 6\"",
+      "Id": "f7af46a896be498ca87d3dec40808b7c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7b56c8a7e1b8483d8c219bbdbde56b3c",
+          "Name": "Wall Type",
+          "Description": "The selected Wall Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All wall types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.RoofTypes, DSRevitNodesUI",
+      "SelectedIndex": 3,
+      "SelectedString": "Generic - 9\"",
+      "Id": "b213596733a548a8abe8dd5f70a81e8d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2be9516855ea4456b08c367f7ca05d31",
+          "Name": "Roof Types",
+          "Description": "The selected Roof Types",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All roof types in the current document."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "50c6e54cefc943c4a4d860aedd14bf84",
+      "End": "60149df3cfb441039f07ac589075c696",
+      "Id": "14a0eecc871d413899fd8795398ff246",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1cb595a3f4924057a2189b999f50a4a1",
+      "End": "cd95c483c9d540d0a249d20edd60e91d",
+      "Id": "8a6c0e9091e24b6c9fb6c7a5b4de320f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "65d683d100904a8ea971ff28034e83b5",
+      "End": "74fd019585a449dca43b931832cf57db",
+      "Id": "45925779edcc49d49941dbbf45ecf800",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fed7c70681ab4cc7a0201fbe6ddf6ce9",
+      "End": "fefb7062d4a2423385a90cedf5c9758d",
+      "Id": "fd9f64f3d44347beaa26dc68c1a2db5d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "da1345fdbed34436a35f133bd3528dc5",
+      "End": "d24ab6d9ed894cc88c8738a80928a53f",
+      "Id": "79f5da30edc34c48979cf43e297d5e31",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7b56c8a7e1b8483d8c219bbdbde56b3c",
+      "End": "a07e47b377324094ac4ab3facfe5422a",
+      "Id": "7d6a7cc090e443b1a34d8d33548397fd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2be9516855ea4456b08c367f7ca05d31",
+      "End": "140c5354965e4ce2bd1571a457089809",
+      "Id": "8e2509f6e4d242669dff5ae75b18a5b3",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "PythonNet3 Engine",
+      "Version": "1.4.8.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "59df8301489a41d6acfd48e91214b70b"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "10.3",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.1.5050",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "415d2460260b49008157d67106edaf94",
+        "Name": "Select Model Element",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 585.0566037735847,
+        "Y": 94.18867924528308
+      },
+      {
+        "Id": "59df8301489a41d6acfd48e91214b70b",
+        "Name": "Python Script From String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1079.5471698113208,
+        "Y": 57.056603773584925
+      },
+      {
+        "Id": "67c399af5cb6430a8bda074faa033965",
+        "Name": "String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 129.50943396226404,
+        "Y": 0.9056603773585863
+      },
+      {
+        "Id": "6cb9477ffcca461484b88d2bdfa05603",
+        "Name": "Base level",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 600.4528301886791,
+        "Y": 425.6603773584905
+      },
+      {
+        "Id": "9b6e675460324363bc1b62d55a7400c0",
+        "Name": "min height",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 599.622641509434,
+        "Y": 548.0
+      },
+      {
+        "Id": "d45dadb37c134e2196497b6e6a9507db",
+        "Name": "max height",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 598.7547169811315,
+        "Y": 665.7735849056605
+      },
+      {
+        "Id": "f7af46a896be498ca87d3dec40808b7c",
+        "Name": "Wall Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 602.2641509433961,
+        "Y": 304.3018867924528
+      },
+      {
+        "Id": "b213596733a548a8abe8dd5f70a81e8d",
+        "Name": "Roof Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 595.848516194883,
+        "Y": 786.9993492325475
+      }
+    ],
+    "Annotations": [],
+    "X": -18.59302222644368,
+    "Y": -108.09819366832551,
+    "Zoom": 0.6523318729977245
+  }
+}
